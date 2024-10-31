@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nightfall Charge Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Nightfall Charge Calculator</h1>
+
+      <!-- Add-ons Section -->
+      <h2>Add-ons</h2>
+      <form id="nightfallForm">
+        <label><input type="checkbox" id="woodenPlank" /> Wooden Plank</label
+        ><br />
+        <label><input type="checkbox" id="burntLetters" /> Burnt Letters</label
+        ><br />
+        <label
+          ><input type="checkbox" id="fallenShingle" /> Fallen Shingle</label
+        ><br />
+        <label
+          ><input type="checkbox" id="malthinkersSkull" /> Malthinker's
+          Skull</label
+        ><br />
+
+        <!-- Player Match Data Section -->
+        <h2>Match Data</h2>
+        <label
+          >Teleports Performed:
+          <input type="number" id="teleports" required /></label
+        ><br />
+        <label
+          >Successful Attacks:
+          <input type="number" id="attacks" required /></label
+        ><br />
+        <label
+          >Survivors Hooked: <input type="number" id="hooks" required /></label
+        ><br />
+        <label
+          >Seconds in Lockers/Teleporting:
+          <input type="number" id="lockerTime" required /></label
+        ><br />
+        <label
+          >Injured Survivors:
+          <input type="number" id="injured" required /></label
+        ><br />
+
+        <button type="button" onclick="resetForm()">Reset</button>
+        <!-- Reset button only -->
+      </form>
+
+      <!-- Results Section -->
+      <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
