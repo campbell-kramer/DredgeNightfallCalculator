@@ -1,0 +1,169 @@
+<!-- title: Dredge Nightfall Calculator
+author: Campbell Kramer
+date: 01 Nov 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dredge Nightfall Charges Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>The Dredge's Nightfall Calculator</h1>
+        <p>Campbell Kramer, 2024</p>
+      </header>
+
+      <nav>
+        <a href="index.html"><h3>Nightfall Calculator</h3></a>
+        <a href="nightfall.html"><h3>About Nightfall</h3></a>
+        <a href="power.html"><h3>About Dredge's Power</h3></a>
+      </nav>
+
+      <!-- results section -->
+      <section class="results-container">
+        <div>
+          <img src="../images/dredge_img.png" alt="" />
+        </div>
+        <div id="results"></div>
+      </section>
+
+      <!-- forms section -->
+      <section class="forms-container">
+        <!-- match data form section -->
+        <form id="match-form">
+          <h2 class="match-heading">Match Data</h2>
+
+          <div class="custom-number-input">
+            <label for="teleports">Teleports Performed</label>
+            <div class="number-input">
+              <button type="button" onclick="decrementValue('teleports')">−</button>
+              <input type="number" id="teleports" value="0" min="0" />
+              <button type="button" onclick="incrementValue('teleports')">+</button>
+            </div>
+          </div>
+
+          <div class="custom-number-input">
+            <label for="attacks">Successful Attacks</label>
+            <div class="number-input">
+              <button type="button" onclick="decrementValue('attacks')">−</button>
+              <input type="number" id="attacks" value="0" min="0" />
+              <button type="button" onclick="incrementValue('attacks')">+</button>
+            </div>
+          </div>
+
+          <div class="custom-number-input">
+            <label for="attacks">Survivors Hooked</label>
+            <div class="number-input">
+              <button type="button" onclick="decrementValue('hooks')">−</button>
+              <input type="number" id="hooks" value="0" min="0" />
+              <button type="button" onclick="incrementValue('hooks')">+</button>
+            </div>
+          </div>
+
+          <div class="custom-number-input">
+            <label for="locker-time">Seconds in Lockers/Teleporting</label>
+            <div class="number-input">
+              <button type="button" onclick="decrementValue('locker-time')">−</button>
+              <input type="number" id="locker-time" value="0" min="0" />
+              <button type="button" onclick="incrementValue('locker-time')">+</button>
+            </div>
+          </div>
+
+          <div class="custom-number-input">
+            <label for="attacks">Injured Survivors</label>
+            <div class="number-input">
+              <button type="button" onclick="decrementValue('injured')">−</button>
+              <input type="number" id="injured" value="0" min="0" />
+              <button type="button" onclick="incrementValue('injured')">+</button>
+            </div>
+          </div>
+
+          <div class="match-button">
+            <button type="button" onclick="resetMatchData()">reset match data</button>
+          </div>
+        </form>
+
+        <!-- add-ons section -->
+        <form id="addon-form">
+          <h2>Add-ons</h2>
+          <div class="pretty p-switch p-fill">
+            <input type="checkbox" id="wooden-plank" />
+            <div class="state">
+              <label>Wooden Plank</label>
+            </div>
+          </div>
+
+          <div class="pretty p-switch p-fill">
+            <input type="checkbox" id="burnt-letters" />
+            <div class="state">
+              <label>Burnt Letters</label>
+            </div>
+          </div>
+
+          <div class="pretty p-switch p-fill">
+            <input type="checkbox" id="fallen-shingle" />
+            <div class="state">
+              <label>Fallen Shingle</label>
+            </div>
+          </div>
+
+          <div class="pretty p-switch p-fill">
+            <input type="checkbox" id="malthinkers-skull" />
+            <div class="state">
+              <label>Malthinker's Skull</label>
+            </div>
+          </div>
+
+          <div class="addon-button">
+            <button type="button" onclick="resetAddOns()">reset add-ons</button>
+          </div>
+        </form>
+      </section>
+
+      <footer>
+        <p>
+          images sourced from:
+          <a href="https://deadbydaylight.fandom.com/wiki/The_Dredge" target="_blank"
+            >https://deadbydaylight.fandom.com/wiki/The_Dredge"
+          </a>
+        </p>
+        <p
+          xmlns:cc="http://creativecommons.org/ns#"
+          xmlns:dct="http://purl.org/dc/terms/">
+          <span property="dct:title">Dredge Nightfall Calculator</span> by
+          <span property="cc:attributionName">Campbell Kramer</span> is licensed under
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
+            target="_blank"
+            rel="license noopener noreferrer"
+            style="display: inline-block"
+            >CC BY 4.0<img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+              "
+              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+              alt="" /><img
+              style="
+                height: 22px !important;
+                margin-left: 3px;
+                vertical-align: text-bottom;
+              "
+              src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+              alt=""
+          /></a>
+        </p>
+        <p>Free Palestine</p>
+      </footer>
+    </main>
+    <script src="../script.js"></script>
+  </body>
+</html>
